@@ -1,0 +1,116 @@
+unit Unit3;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, AdvMemo, AdvmES,
+  AdvCustomComponent, AdvPDFIO, AdvMemoPDFIO, Vcl.ExtCtrls, AdvToolBar,
+  AdvToolBarExt, AdvMemoToolBar;
+
+type
+  TForm3 = class(TForm)
+    Button2: TButton;
+    AdvMemoPDFIO1: TAdvMemoPDFIO;
+    Panel1: TPanel;
+    ComboBox1: TComboBox;
+    Panel2: TPanel;
+    AdvMemo1: TAdvMemo;
+    Label1: TLabel;
+    Button3: TButton;
+    Button1: TButton;
+    Label2: TLabel;
+    procedure FormShow(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure ComboBox1Change(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form3: TForm3;
+
+implementation
+
+{$R *.dfm}
+
+uses Unit1;
+
+procedure TForm3.Button1Click(Sender: TObject);
+var
+filename:string;
+begin
+
+filename := combobox1.Text;
+filename := stringreplace(filename, '/', '_',[rfReplaceAll, rfIgnoreCase]);
+
+
+
+filename := 'datasets/notes/log_'+filename+'.txt';
+
+advmemo1.Lines.SaveToFile(filename);
+end;
+
+procedure TForm3.Button2Click(Sender: TObject);
+var
+  fileName : string;
+  myFile   : TextFile;
+  data     : string;
+
+begin
+advmemo1.Lines.Clear; ////maak voorafgaand leeg
+
+filename := combobox1.Text;
+filename := stringreplace(filename, '/', '_',[rfReplaceAll, rfIgnoreCase]);
+
+
+
+filename := 'datasets/notes/log_'+filename+'.txt';
+
+label1.Caption:= filename;
+
+   if fileexists(fileName) then
+   begin
+     advmemo1.Lines.LoadFromFile(filename);
+   end else
+   begin
+     advmemo1.Lines.SaveToFile(filename); ////maak leeg betstand aan
+   end;
+
+end;
+
+procedure TForm3.Button3Click(Sender: TObject);
+begin
+AdvMemoPDFIO1.Save('datasets/notes/test.pdf')
+end;
+
+procedure TForm3.ComboBox1Change(Sender: TObject);
+begin
+button2.Click; //load log data
+form1.ComboBox1.Text:= combobox1.Text;
+form1.Button8.Click;
+end;
+
+procedure TForm3.FormShow(Sender: TObject);
+var
+date:string;
+i:integer;
+begin
+
+  for I := 0 to form1.ComboBox1.GetCount do
+    begin
+       date := combobox1.Items[i];
+       date := stringreplace(date, '/', '_',[rfReplaceAll, rfIgnoreCase]);
+
+     //combobox1.Items.Add(date);
+    end;
+
+
+
+end;
+
+end.

@@ -1,0 +1,9 @@
+Welcome in Your Day logger.
+
+Here You can write things down in a txt log.
+All files can be found in the "datasets/notes" 
+folder and is stored with a datestamp filename.
+YYYY-MM-DD.                            
+
+Cheers                
+                           
