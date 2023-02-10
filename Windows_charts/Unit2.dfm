@@ -1,10 +1,11 @@
 object Form2: TForm2
   Left = 0
   Top = 0
+  Cursor = crHelp
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'Credits box'
-  ClientHeight = 433
+  ClientHeight = 447
   ClientWidth = 641
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -15,7 +16,7 @@ object Form2: TForm2
   OldCreateOrder = False
   DesignSize = (
     641
-    433)
+    447)
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
@@ -26,8 +27,8 @@ object Form2: TForm2
     Caption = 'Faizan Awan'
   end
   object Label2: TLabel
-    Left = 97
-    Top = 10
+    Left = 141
+    Top = 9
     Width = 482
     Height = 16
     Alignment = taCenter
@@ -43,8 +44,8 @@ object Form2: TForm2
     WordWrap = True
   end
   object Label3: TLabel
-    Left = 227
-    Top = 59
+    Left = 271
+    Top = 58
     Width = 204
     Height = 29
     Caption = 'KUDOS 2 YOU '#10084
@@ -154,8 +155,8 @@ object Form2: TForm2
     Caption = 'Prakash Ekambaranellore'
   end
   object Label19: TLabel
-    Left = 164
-    Top = 387
+    Left = 151
+    Top = 397
     Width = 345
     Height = 16
     Caption = 'And all People who contributed from the Clubhouse groups :'
@@ -224,8 +225,8 @@ object Form2: TForm2
     Caption = 'T'#233'a Romero'
   end
   object Label27: TLabel
-    Left = 134
-    Top = 35
+    Left = 178
+    Top = 34
     Width = 390
     Height = 19
     Caption = 'THESE PEOPLE SERIOUSLY ROCK THIS PLANET!'
@@ -286,8 +287,8 @@ object Form2: TForm2
     Caption = 'Mitch De Leon'
   end
   object Label35: TLabel
-    Left = 181
-    Top = 405
+    Left = 168
+    Top = 415
     Width = 309
     Height = 18
     Caption = 'Medtech 24/7 Lobby && Mending Medicine'
@@ -494,9 +495,74 @@ object Form2: TForm2
     Height = 13
     Caption = 'David Macias'
   end
+  object Label64: TLabel
+    Left = 327
+    Top = 367
+    Width = 79
+    Height = 13
+    Caption = 'Elli van der Werf'
+  end
+  object Label65: TLabel
+    Left = 17
+    Top = 40
+    Width = 96
+    Height = 14
+    Cursor = crHandPoint
+    Caption = 'Association NLT'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    OnClick = Label65Click
+  end
+  object Label66: TLabel
+    Left = 17
+    Top = 58
+    Width = 71
+    Height = 14
+    Cursor = crHandPoint
+    Caption = 'Technasium'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    OnClick = Label66Click
+  end
+  object Label67: TLabel
+    Left = 17
+    Top = 25
+    Width = 49
+    Height = 11
+    Caption = 'Certified by'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -9
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label68: TLabel
+    Left = 17
+    Top = 76
+    Width = 103
+    Height = 14
+    Cursor = crHelp
+    Caption = 'Research Q-Strip'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    OnClick = Label68Click
+  end
   object RadioGroup1: TRadioGroup
     Left = 16
-    Top = 92
+    Top = 93
     Width = 617
     Height = 293
     Anchors = [akTop]

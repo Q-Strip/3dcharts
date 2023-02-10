@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>1899-12-30 00:00:00.000.579,=C:\Users\devel\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.902,=C:\Users\devel\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.335,C:\Users\devel\Documents\Embarcadero\Studio\Projects\Windows_charts\Unit1.pas=C:\Users\devel\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.240,=C:\Users\devel\Documents\Embarcadero\Studio\Projects\Windows_charts\Unit2.pas</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.335,C:\Users\devel\Documents\Embarcadero\Studio\Projects\Windows_charts\Unit1.dfm=C:\Users\devel\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.969,=C:\Users\devel\Documents\Embarcadero\Studio\Projects\Windows_charts\Unit3.pas</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.975,C:\Users\devel\Documents\Embarcadero\Studio\Projects\Windows_charts\Project1.dproj=C:\Users\devel\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.378,C:\Users\devel\Documents\Embarcadero\Studio\Projects\Windows_charts\QStripDataReader.dproj=C:\Users\devel\Documents\Embarcadero\Studio\Projects\Windows_charts\Project1.dproj</Transaction>
     <Transaction>1899-12-30 00:00:00.000.770,=C:\Users\devel\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>1899-12-30 00:00:00.000.182,=C:\Users\devel\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.579,=C:\Users\devel\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.975,C:\Users\devel\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\devel\Documents\Embarcadero\Studio\Projects\Windows_charts\Project1.dproj</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.240,=C:\Users\devel\Documents\Embarcadero\Studio\Projects\Windows_charts\Unit2.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.335,C:\Users\devel\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\devel\Documents\Embarcadero\Studio\Projects\Windows_charts\Unit1.dfm</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.969,=C:\Users\devel\Documents\Embarcadero\Studio\Projects\Windows_charts\Unit3.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.378,C:\Users\devel\Documents\Embarcadero\Studio\Projects\Windows_charts\Project1.dproj=C:\Users\devel\Documents\Embarcadero\Studio\Projects\Windows_charts\QStripDataReader.dproj</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.902,=C:\Users\devel\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.335,C:\Users\devel\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\devel\Documents\Embarcadero\Studio\Projects\Windows_charts\Unit1.pas</Transaction>
   </Transactions>
 </BorlandProject>

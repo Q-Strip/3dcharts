@@ -2317,7 +2317,7 @@ object Form1: TForm1
     AnchorHint = False
     Panels = <>
     SimplePanel = True
-    SimpleText = ' Q-Strip 2022 Nocturnal Perspiration Measurement [Research]'
+    SimpleText = ' Q-Strip 2023 Nocturnal Perspiration Measurement [Research]'
     URLColor = clBlue
     Version = '1.6.0.0'
   end

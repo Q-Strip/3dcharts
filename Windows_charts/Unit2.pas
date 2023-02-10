@@ -4,7 +4,7 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, shellapi;
 
 type
   TForm2 = class(TForm)
@@ -72,6 +72,14 @@ type
     Label61: TLabel;
     Label62: TLabel;
     Label63: TLabel;
+    Label64: TLabel;
+    Label65: TLabel;
+    Label66: TLabel;
+    Label67: TLabel;
+    Label68: TLabel;
+    procedure Label65Click(Sender: TObject);
+    procedure Label66Click(Sender: TObject);
+    procedure Label68Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -84,5 +92,22 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TForm2.Label65Click(Sender: TObject);
+begin
+ ShellExecute(HInstance, 'open', PChar('https://www.verenigingnlt.nl/'), nil, nil, SW_NORMAL);
+
+end;
+
+procedure TForm2.Label66Click(Sender: TObject);
+begin
+ShellExecute(HInstance, 'open', PChar('https://www.technasium.nl/'), nil, nil, SW_NORMAL);
+
+end;
+
+procedure TForm2.Label68Click(Sender: TObject);
+begin
+ ShellExecute(HInstance, 'open', PChar('https://www.research.q-strip.com'), nil, nil, SW_NORMAL);
+end;
 
 end.
