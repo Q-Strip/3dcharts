@@ -6,7 +6,7 @@ object Form2: TForm2
   BorderStyle = bsSingle
   Caption = 'Credits box'
   ClientHeight = 463
-  ClientWidth = 624
+  ClientWidth = 632
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,7 +15,7 @@ object Form2: TForm2
   Font.Style = []
   OldCreateOrder = False
   DesignSize = (
-    624
+    632
     463)
   PixelsPerInch = 96
   TextHeight = 13
@@ -440,7 +440,7 @@ object Form2: TForm2
     Caption = 'Odysseus Argy'
   end
   object Label56: TLabel
-    Left = 329
+    Left = 328
     Top = 293
     Width = 111
     Height = 13
@@ -597,14 +597,14 @@ object Form2: TForm2
   end
   object Label74: TLabel
     Left = 24
-    Top = 357
+    Top = 356
     Width = 64
     Height = 13
     Caption = 'Cynthia Stott'
   end
   object Label75: TLabel
     Left = 181
-    Top = 357
+    Top = 356
     Width = 81
     Height = 13
     Caption = 'Melissa Mattingly'
@@ -616,11 +616,39 @@ object Form2: TForm2
     Height = 13
     Caption = 'Philip Owen'
   end
+  object Label77: TLabel
+    Left = 502
+    Top = 357
+    Width = 47
+    Height = 13
+    Caption = 'Jelena BR'
+  end
+  object Label78: TLabel
+    Left = 24
+    Top = 373
+    Width = 76
+    Height = 13
+    Caption = 'Sandra Spencer'
+  end
+  object Label79: TLabel
+    Left = 180
+    Top = 373
+    Width = 91
+    Height = 13
+    Caption = 'Rhonda Davenport'
+  end
+  object Label80: TLabel
+    Left = 327
+    Top = 373
+    Width = 83
+    Height = 13
+    Caption = 'Carlos R. Villamar'
+  end
   object RadioGroup1: TRadioGroup
-    Left = -1
+    Left = 3
     Top = 96
     Width = 606
-    Height = 281
+    Height = 296
     Anchors = [akTop]
     TabOrder = 0
   end
