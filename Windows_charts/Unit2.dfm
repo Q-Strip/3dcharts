@@ -602,11 +602,25 @@ object Form2: TForm2
     Height = 13
     Caption = 'Cynthia Stott'
   end
+  object Label75: TLabel
+    Left = 181
+    Top = 357
+    Width = 81
+    Height = 13
+    Caption = 'Melissa Mattingly'
+  end
+  object Label76: TLabel
+    Left = 328
+    Top = 357
+    Width = 55
+    Height = 13
+    Caption = 'Philip Owen'
+  end
   object RadioGroup1: TRadioGroup
     Left = -1
     Top = 96
     Width = 606
-    Height = 289
+    Height = 281
     Anchors = [akTop]
     TabOrder = 0
   end
