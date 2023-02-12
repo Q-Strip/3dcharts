@@ -5,8 +5,8 @@ object Form2: TForm2
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'Credits box'
-  ClientHeight = 447
-  ClientWidth = 641
+  ClientHeight = 463
+  ClientWidth = 624
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,8 +15,8 @@ object Form2: TForm2
   Font.Style = []
   OldCreateOrder = False
   DesignSize = (
-    641
-    447)
+    624
+    463)
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
@@ -58,7 +58,7 @@ object Form2: TForm2
   end
   object Label4: TLabel
     Left = 181
-    Top = 119
+    Top = 115
     Width = 71
     Height = 13
     Caption = 'Johan P.Lange'
@@ -72,91 +72,91 @@ object Form2: TForm2
   end
   object Label6: TLabel
     Left = 24
-    Top = 119
+    Top = 115
     Width = 59
     Height = 13
     Caption = 'Alka Sahnan'
   end
   object Label7: TLabel
     Left = 24
-    Top = 196
+    Top = 178
     Width = 80
     Height = 13
     Caption = 'Rehan Mahmood'
   end
   object Label8: TLabel
     Left = 24
-    Top = 215
+    Top = 194
     Width = 130
     Height = 13
     Caption = 'Mustapha Kamal Zulkarnain'
   end
   object Label9: TLabel
     Left = 181
-    Top = 177
+    Top = 162
     Width = 90
     Height = 13
     Caption = 'Jason Scott Cohen'
   end
   object Label10: TLabel
     Left = 24
-    Top = 234
+    Top = 211
     Width = 52
     Height = 13
     Caption = 'Yagil Netta'
   end
   object Label11: TLabel
     Left = 24
-    Top = 253
+    Top = 226
     Width = 76
     Height = 13
     Caption = 'Tifanny Istamto'
   end
   object Label12: TLabel
     Left = 181
-    Top = 158
+    Top = 147
     Width = 38
     Height = 13
     Caption = 'Eric Yeo'
   end
   object Label13: TLabel
     Left = 502
-    Top = 215
+    Top = 194
     Width = 58
     Height = 13
     Caption = 'Sussi Bianco'
   end
   object Label14: TLabel
     Left = 181
-    Top = 253
+    Top = 226
     Width = 68
     Height = 13
     Caption = 'Nadav Gerson'
   end
   object Label15: TLabel
     Left = 24
-    Top = 138
+    Top = 130
     Width = 72
     Height = 13
     Caption = 'Alipio De Veyra'
   end
   object Label16: TLabel
     Left = 181
-    Top = 215
+    Top = 194
     Width = 120
     Height = 13
     Caption = 'Celine Anelone Brozovich'
   end
   object Label17: TLabel
     Left = 181
-    Top = 196
+    Top = 178
     Width = 120
     Height = 13
     Caption = 'Prakash Ekambaranellore'
   end
   object Label19: TLabel
-    Left = 151
-    Top = 397
+    Left = 149
+    Top = 398
     Width = 345
     Height = 16
     Caption = 'And all People who contributed from the Clubhouse groups :'
@@ -170,35 +170,35 @@ object Form2: TForm2
   end
   object Label18: TLabel
     Left = 181
-    Top = 233
+    Top = 210
     Width = 51
     Height = 13
     Caption = 'Leo Chong'
   end
   object Label20: TLabel
     Left = 502
-    Top = 176
+    Top = 161
     Width = 41
     Height = 13
     Caption = 'Kai Fong'
   end
   object Label21: TLabel
     Left = 24
-    Top = 177
+    Top = 162
     Width = 55
     Height = 13
     Caption = 'Jaxon Marc'
   end
   object Label22: TLabel
     Left = 24
-    Top = 158
+    Top = 147
     Width = 107
     Height = 13
     Caption = 'Ashwini Madawan Nair'
   end
   object Label23: TLabel
     Left = 502
-    Top = 234
+    Top = 211
     Width = 78
     Height = 13
     Caption = 'Jason Henkhaus'
@@ -212,14 +212,14 @@ object Form2: TForm2
   end
   object Label25: TLabel
     Left = 181
-    Top = 138
+    Top = 130
     Width = 54
     Height = 13
     Caption = 'Asif Ahmed'
   end
   object Label26: TLabel
     Left = 327
-    Top = 119
+    Top = 115
     Width = 58
     Height = 13
     Caption = 'T'#233'a Romero'
@@ -239,56 +239,56 @@ object Form2: TForm2
   end
   object Label28: TLabel
     Left = 328
-    Top = 138
+    Top = 130
     Width = 147
     Height = 13
     Caption = 'Mary Sophy (Jacob) Yohannan'
   end
   object Label29: TLabel
     Left = 327
-    Top = 158
+    Top = 147
     Width = 71
     Height = 13
     Caption = 'Tiffany Brazile '
   end
   object Label30: TLabel
     Left = 328
-    Top = 177
+    Top = 162
     Width = 64
     Height = 13
     Caption = 'Mark Yamada'
   end
   object Label31: TLabel
     Left = 328
-    Top = 196
+    Top = 178
     Width = 67
     Height = 13
     Caption = 'Gordon Morse'
   end
   object Label32: TLabel
     Left = 328
-    Top = 215
+    Top = 194
     Width = 65
     Height = 13
     Caption = 'Maxwell Krem'
   end
   object Label33: TLabel
     Left = 328
-    Top = 234
+    Top = 211
     Width = 73
     Height = 13
     Caption = 'Roland da Silva'
   end
   object Label34: TLabel
     Left = 502
-    Top = 196
+    Top = 178
     Width = 67
     Height = 13
     Caption = 'Mitch De Leon'
   end
   object Label35: TLabel
-    Left = 168
-    Top = 415
+    Left = 166
+    Top = 420
     Width = 309
     Height = 18
     Caption = 'Medtech 24/7 Lobby && Mending Medicine'
@@ -301,21 +301,21 @@ object Form2: TForm2
   end
   object Label36: TLabel
     Left = 502
-    Top = 157
+    Top = 146
     Width = 103
     Height = 13
     Caption = 'Noel Guillama-Alvarez'
   end
   object Label37: TLabel
     Left = 502
-    Top = 119
+    Top = 115
     Width = 82
     Height = 13
     Caption = 'Tomoko Mitsuoka'
   end
   object Label38: TLabel
     Left = 502
-    Top = 138
+    Top = 130
     Width = 67
     Height = 13
     Caption = 'Cezara Maxim'
@@ -329,175 +329,175 @@ object Form2: TForm2
   end
   object Label40: TLabel
     Left = 329
-    Top = 253
+    Top = 226
     Width = 78
     Height = 13
     Caption = 'Susanne Nielson'
   end
   object Label41: TLabel
     Left = 502
-    Top = 253
+    Top = 226
     Width = 53
     Height = 13
     Caption = 'Thomas Lie'
   end
   object Label42: TLabel
     Left = 181
-    Top = 272
+    Top = 242
     Width = 67
     Height = 13
     Caption = 'Shikha Alqalaf'
   end
   object Label43: TLabel
     Left = 24
-    Top = 272
+    Top = 242
     Width = 67
     Height = 13
     Caption = 'Daniel Saatchi'
   end
   object Label44: TLabel
     Left = 329
-    Top = 272
+    Top = 242
     Width = 79
     Height = 13
     Caption = 'Heather Williams'
   end
   object Label45: TLabel
     Left = 502
-    Top = 272
+    Top = 242
     Width = 90
     Height = 13
     Caption = 'Shreyasta N Samal'
   end
   object Label46: TLabel
     Left = 24
-    Top = 291
+    Top = 260
     Width = 71
     Height = 13
     Caption = 'Annette Usken'
   end
   object Label47: TLabel
     Left = 181
-    Top = 291
+    Top = 260
     Width = 73
     Height = 13
     Caption = 'Arnav Mahajan'
   end
   object Label48: TLabel
     Left = 329
-    Top = 291
+    Top = 260
     Width = 97
     Height = 13
     Caption = 'Jeevan Gunaratnam'
   end
   object Label49: TLabel
     Left = 502
-    Top = 291
+    Top = 260
     Width = 50
     Height = 13
     Caption = 'Dipti Bhatt'
   end
   object Label50: TLabel
     Left = 24
-    Top = 310
+    Top = 277
     Width = 62
     Height = 13
     Caption = 'Shu-Tze TAN'
   end
   object Label51: TLabel
     Left = 181
-    Top = 310
+    Top = 277
     Width = 99
     Height = 13
     Caption = 'Tapesh Dutt Nagaria'
   end
   object Label52: TLabel
     Left = 329
-    Top = 310
+    Top = 277
     Width = 121
     Height = 13
     Caption = 'Haziq Irsyad Salehhuddin'
   end
   object Label53: TLabel
     Left = 502
-    Top = 310
+    Top = 277
     Width = 90
     Height = 13
     Caption = 'Joyce Waterhouse'
   end
   object Label54: TLabel
     Left = 24
-    Top = 329
+    Top = 293
     Width = 61
     Height = 13
     Caption = 'Chuck Morris'
   end
   object Label55: TLabel
     Left = 181
-    Top = 329
+    Top = 293
     Width = 73
     Height = 13
     Caption = 'Odysseus Argy'
   end
   object Label56: TLabel
     Left = 329
-    Top = 329
+    Top = 293
     Width = 111
     Height = 13
     Caption = 'Tiffany Liley-Williamson'
   end
   object Label57: TLabel
     Left = 24
-    Top = 367
+    Top = 324
     Width = 68
     Height = 13
     Caption = 'Chethan Bhati'
   end
   object Label58: TLabel
     Left = 24
-    Top = 348
+    Top = 309
     Width = 59
     Height = 13
     Caption = 'Roland Ong '
   end
   object Label59: TLabel
     Left = 181
-    Top = 348
+    Top = 309
     Width = 82
     Height = 13
     Caption = 'Abdulla Alzahrani'
   end
   object Label60: TLabel
     Left = 327
-    Top = 348
+    Top = 309
     Width = 150
     Height = 13
     Caption = 'Hayman Buwaneswaran Buwan'
   end
   object Label61: TLabel
     Left = 502
-    Top = 348
+    Top = 309
     Width = 68
     Height = 13
     Caption = 'Myra Waiman '
   end
   object Label62: TLabel
     Left = 502
-    Top = 329
-    Width = 50
+    Top = 293
+    Width = 60
     Height = 13
-    Caption = 'Chris Jung'
+    Caption = 'Chris Jung '#9840
   end
   object Label63: TLabel
-    Left = 181
-    Top = 367
+    Left = 502
+    Top = 324
     Width = 62
     Height = 13
     Caption = 'David Macias'
   end
   object Label64: TLabel
-    Left = 327
-    Top = 367
+    Left = 181
+    Top = 324
     Width = 79
     Height = 13
     Caption = 'Elli van der Werf'
@@ -560,11 +560,53 @@ object Form2: TForm2
     ParentFont = False
     OnClick = Label68Click
   end
+  object Label69: TLabel
+    Left = 327
+    Top = 324
+    Width = 137
+    Height = 13
+    Caption = 'NICOLA Swietkowiak-Gehrke'
+  end
+  object Label70: TLabel
+    Left = 181
+    Top = 340
+    Width = 110
+    Height = 13
+    Caption = 'Olushola Yahya Gegele'
+  end
+  object Label71: TLabel
+    Left = 327
+    Top = 340
+    Width = 71
+    Height = 13
+    Caption = 'Christine Smith'
+  end
+  object Label72: TLabel
+    Left = 24
+    Top = 340
+    Width = 60
+    Height = 13
+    Caption = 'Dave Gibson'
+  end
+  object Label73: TLabel
+    Left = 502
+    Top = 340
+    Width = 52
+    Height = 13
+    Caption = 'Willi Schroll'
+  end
+  object Label74: TLabel
+    Left = 24
+    Top = 357
+    Width = 64
+    Height = 13
+    Caption = 'Cynthia Stott'
+  end
   object RadioGroup1: TRadioGroup
-    Left = 16
-    Top = 93
-    Width = 617
-    Height = 293
+    Left = -1
+    Top = 96
+    Width = 606
+    Height = 289
     Anchors = [akTop]
     TabOrder = 0
   end
