@@ -155,7 +155,7 @@ object Form2: TForm2
     Caption = 'Prakash Ekambaranellore'
   end
   object Label19: TLabel
-    Left = 149
+    Left = 138
     Top = 398
     Width = 345
     Height = 16
@@ -287,7 +287,7 @@ object Form2: TForm2
     Caption = 'Mitch De Leon'
   end
   object Label35: TLabel
-    Left = 166
+    Left = 155
     Top = 420
     Width = 309
     Height = 18
@@ -643,6 +643,13 @@ object Form2: TForm2
     Width = 83
     Height = 13
     Caption = 'Carlos R. Villamar'
+  end
+  object Label81: TLabel
+    Left = 502
+    Top = 373
+    Width = 66
+    Height = 13
+    Caption = 'Nisten Tahiraj'
   end
   object RadioGroup1: TRadioGroup
     Left = 3
