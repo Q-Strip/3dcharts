@@ -156,7 +156,7 @@ object Form2: TForm2
   end
   object Label19: TLabel
     Left = 138
-    Top = 398
+    Top = 415
     Width = 345
     Height = 16
     Caption = 'And all People who contributed from the Clubhouse groups :'
@@ -288,7 +288,7 @@ object Form2: TForm2
   end
   object Label35: TLabel
     Left = 155
-    Top = 420
+    Top = 437
     Width = 309
     Height = 18
     Caption = 'Medtech 24/7 Lobby && Mending Medicine'
@@ -625,7 +625,7 @@ object Form2: TForm2
   end
   object Label78: TLabel
     Left = 24
-    Top = 373
+    Top = 390
     Width = 76
     Height = 13
     Caption = 'Sandra Spencer'
@@ -637,13 +637,6 @@ object Form2: TForm2
     Height = 13
     Caption = 'Rhonda Davenport'
   end
-  object Label80: TLabel
-    Left = 327
-    Top = 373
-    Width = 83
-    Height = 13
-    Caption = 'Carlos R. Villamar'
-  end
   object Label81: TLabel
     Left = 502
     Top = 373
@@ -651,11 +644,32 @@ object Form2: TForm2
     Height = 13
     Caption = 'Nisten Tahiraj'
   end
+  object Label82: TLabel
+    Left = 24
+    Top = 373
+    Width = 77
+    Height = 13
+    Caption = 'Hans Constandt'
+  end
+  object Label80: TLabel
+    Left = 327
+    Top = 373
+    Width = 83
+    Height = 13
+    Caption = 'Carlos R. Villamar'
+  end
+  object Label83: TLabel
+    Left = 180
+    Top = 390
+    Width = 64
+    Height = 13
+    Caption = 'Tom Donnelly'
+  end
   object RadioGroup1: TRadioGroup
-    Left = 3
+    Left = 8
     Top = 96
     Width = 606
-    Height = 296
+    Height = 321
     Anchors = [akTop]
     TabOrder = 0
   end
