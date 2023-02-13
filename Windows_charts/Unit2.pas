@@ -92,6 +92,8 @@ type
     Label82: TLabel;
     Label80: TLabel;
     Label83: TLabel;
+    Label84: TLabel;
+    Label85: TLabel;
     procedure Label65Click(Sender: TObject);
     procedure Label66Click(Sender: TObject);
     procedure Label68Click(Sender: TObject);

@@ -177,7 +177,7 @@ object Form2: TForm2
   end
   object Label20: TLabel
     Left = 502
-    Top = 161
+    Top = 162
     Width = 41
     Height = 13
     Caption = 'Kai Fong'
@@ -301,7 +301,7 @@ object Form2: TForm2
   end
   object Label36: TLabel
     Left = 502
-    Top = 146
+    Top = 147
     Width = 103
     Height = 13
     Caption = 'Noel Guillama-Alvarez'
@@ -665,11 +665,25 @@ object Form2: TForm2
     Height = 13
     Caption = 'Tom Donnelly'
   end
+  object Label84: TLabel
+    Left = 327
+    Top = 390
+    Width = 71
+    Height = 13
+    Caption = 'Annette Usken'
+  end
+  object Label85: TLabel
+    Left = 502
+    Top = 390
+    Width = 54
+    Height = 13
+    Caption = 'Linda Kemp'
+  end
   object RadioGroup1: TRadioGroup
     Left = 8
     Top = 96
     Width = 606
-    Height = 321
+    Height = 313
     Anchors = [akTop]
     TabOrder = 0
   end

@@ -47,6 +47,7 @@ type
     Label8: TLabel;
     Series2: TLineSeries;
     CheckBox2: TCheckBox;
+    Label9: TLabel;
     procedure FormCreate(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);

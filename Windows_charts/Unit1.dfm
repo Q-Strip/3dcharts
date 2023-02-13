@@ -2091,10 +2091,20 @@ object Form1: TForm1
     end
     object Label8: TLabel
       Left = 293
-      Top = 45
+      Top = 47
       Width = 77
       Height = 13
       Caption = ' avg of  minutes'
+    end
+    object Label9: TLabel
+      Left = 800
+      Top = 47
+      Width = 317
+      Height = 13
+      Anchors = [akTop, akRight]
+      Caption = 
+        'Drag && Drop Your qstrip.txt in to the charts to visualise Your ' +
+        'data '
     end
     object Button2: TButton
       Left = 1042
@@ -2160,7 +2170,7 @@ object Form1: TForm1
     end
     object RadioButton1: TRadioButton
       Left = 40
-      Top = 45
+      Top = 47
       Width = 92
       Height = 15
       Caption = 'Display In Q'
@@ -2171,7 +2181,7 @@ object Form1: TForm1
     end
     object RadioButton2: TRadioButton
       Left = 137
-      Top = 44
+      Top = 46
       Width = 92
       Height = 17
       Caption = 'Display sweeps'
@@ -2198,7 +2208,7 @@ object Form1: TForm1
     end
     object ComboBox2: TComboBox
       Left = 243
-      Top = 42
+      Top = 44
       Width = 41
       Height = 21
       TabOrder = 10
@@ -2221,7 +2231,7 @@ object Form1: TForm1
     end
     object CheckBox2: TCheckBox
       Left = 388
-      Top = 44
+      Top = 46
       Width = 97
       Height = 17
       Caption = 'Use 0 Line'
