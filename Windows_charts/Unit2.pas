@@ -75,8 +75,6 @@ type
     Label64: TLabel;
     Label65: TLabel;
     Label66: TLabel;
-    Label67: TLabel;
-    Label68: TLabel;
     Label69: TLabel;
     Label70: TLabel;
     Label71: TLabel;
@@ -94,9 +92,14 @@ type
     Label83: TLabel;
     Label84: TLabel;
     Label85: TLabel;
+    Label86: TLabel;
+    Label87: TLabel;
+    GroupBox1: TGroupBox;
+    GroupBox2: TGroupBox;
     procedure Label65Click(Sender: TObject);
     procedure Label66Click(Sender: TObject);
     procedure Label68Click(Sender: TObject);
+    procedure Label86Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -125,6 +128,11 @@ end;
 procedure TForm2.Label68Click(Sender: TObject);
 begin
  ShellExecute(HInstance, 'open', PChar('https://www.research.q-strip.com'), nil, nil, SW_NORMAL);
+end;
+
+procedure TForm2.Label86Click(Sender: TObject);
+begin
+ ShellExecute(HInstance, 'open', PChar('https://www.uname-it.com/'), nil, nil, SW_NORMAL);
 end;
 
 end.
