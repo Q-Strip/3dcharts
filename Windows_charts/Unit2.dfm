@@ -4,7 +4,7 @@ object Form2: TForm2
   Cursor = crHelp
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
-  Caption = 'Credits box'
+  Caption = 'The  Biggest Kudos box in the world! '
   ClientHeight = 462
   ClientWidth = 645
   Color = clBtnFace
@@ -27,8 +27,8 @@ object Form2: TForm2
     Caption = 'Faizan Awan'
   end
   object Label2: TLabel
-    Left = 148
-    Top = 19
+    Left = 144
+    Top = 23
     Width = 482
     Height = 16
     Alignment = taCenter
@@ -44,8 +44,8 @@ object Form2: TForm2
     WordWrap = True
   end
   object Label3: TLabel
-    Left = 278
-    Top = 56
+    Left = 274
+    Top = 60
     Width = 204
     Height = 29
     Caption = 'KUDOS 2 YOU '#10084
@@ -155,7 +155,7 @@ object Form2: TForm2
     Caption = 'Prakash Ekambaranellore'
   end
   object Label19: TLabel
-    Left = 194
+    Left = 149
     Top = 414
     Width = 345
     Height = 16
@@ -225,8 +225,8 @@ object Form2: TForm2
     Caption = 'T'#233'a Romero'
   end
   object Label27: TLabel
-    Left = 185
-    Top = 37
+    Left = 181
+    Top = 41
     Width = 390
     Height = 19
     Caption = 'THESE PEOPLE SERIOUSLY ROCK THIS PLANET!'
@@ -287,7 +287,7 @@ object Form2: TForm2
     Caption = 'Mitch De Leon'
   end
   object Label35: TLabel
-    Left = 211
+    Left = 166
     Top = 436
     Width = 309
     Height = 18
@@ -504,7 +504,7 @@ object Form2: TForm2
   end
   object Label65: TLabel
     Left = 24
-    Top = 20
+    Top = 27
     Width = 96
     Height = 14
     Cursor = crHandPoint
@@ -516,21 +516,6 @@ object Form2: TForm2
     Font.Style = [fsBold]
     ParentFont = False
     OnClick = Label65Click
-  end
-  object Label66: TLabel
-    Left = 24
-    Top = 38
-    Width = 71
-    Height = 14
-    Cursor = crHandPoint
-    Caption = 'Technasium'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'Tahoma'
-    Font.Style = [fsBold]
-    ParentFont = False
-    OnClick = Label66Click
   end
   object Label69: TLabel
     Left = 327
@@ -653,7 +638,7 @@ object Form2: TForm2
   end
   object Label86: TLabel
     Left = 24
-    Top = 431
+    Top = 56
     Width = 52
     Height = 14
     Caption = 'UnameIt'
@@ -667,10 +652,23 @@ object Form2: TForm2
   end
   object Label87: TLabel
     Left = 24
-    Top = 419
-    Width = 66
+    Top = 46
+    Width = 48
     Height = 11
-    Caption = 'Special Thnx To'
+    Caption = 'Salute from'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -9
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label66: TLabel
+    Left = 24
+    Top = 17
+    Width = 49
+    Height = 11
+    Caption = 'Certified by'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -9
@@ -679,26 +677,18 @@ object Form2: TForm2
     ParentFont = False
   end
   object RadioGroup1: TRadioGroup
-    Left = 9
+    Left = 8
     Top = 95
     Width = 621
     Height = 318
     Anchors = [akTop]
     TabOrder = 0
   end
-  object GroupBox1: TGroupBox
-    Left = 8
-    Top = 2
-    Width = 128
-    Height = 83
-    Caption = 'Certified by'
-    TabOrder = 1
-  end
   object GroupBox2: TGroupBox
-    Left = 142
-    Top = 8
-    Width = 488
-    Height = 79
-    TabOrder = 2
+    Left = 139
+    Top = 10
+    Width = 490
+    Height = 81
+    TabOrder = 1
   end
 end

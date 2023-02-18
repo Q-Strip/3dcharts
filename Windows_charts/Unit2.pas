@@ -74,7 +74,6 @@ type
     Label63: TLabel;
     Label64: TLabel;
     Label65: TLabel;
-    Label66: TLabel;
     Label69: TLabel;
     Label70: TLabel;
     Label71: TLabel;
@@ -94,8 +93,8 @@ type
     Label85: TLabel;
     Label86: TLabel;
     Label87: TLabel;
-    GroupBox1: TGroupBox;
     GroupBox2: TGroupBox;
+    Label66: TLabel;
     procedure Label65Click(Sender: TObject);
     procedure Label66Click(Sender: TObject);
     procedure Label68Click(Sender: TObject);
