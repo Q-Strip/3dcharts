@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899-12-30 00:00:00.000.613,=C:\Users\Daan\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.369,=C:\Users\Daan\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.685,=C:\Users\Daan\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.019,=C:\Users\Daan\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.688,=C:\Users\Daan\Documents\Embarcadero\Studio\Projects\Project2.html</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.592,C:\Users\Daan\Documents\Embarcadero\Studio\Projects\Project2.dproj=C:\Users\Daan\Documents\Embarcadero\Studio\Projects\Q-StripCSV_Charts_new\QStripCSVCharts.dproj</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.434,C:\Users\Daan\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\Daan\Documents\Embarcadero\Studio\Projects\Q-StripCSV_Charts_new\Unit1.dfm</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.595,=C:\Users\Daan\Documents\Embarcadero\Studio\Projects\Project2.html</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.867,=C:\Users\Daan\Documents\Embarcadero\Studio\Projects\Project2.html</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.203,=C:\Users\Daan\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.434,C:\Users\Daan\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\Daan\Documents\Embarcadero\Studio\Projects\Q-StripCSV_Charts_new\Unit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.817,=C:\Users\Daan\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.527,=C:\Users\Daan\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.949,=C:\Users\Daan\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.735,=C:\Users\Daan\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.708,=C:\Users\Daan\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.530,=C:\Users\Daan\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.343,=C:\Users\Daan\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.103,=C:\Users\Daan\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone" Android="ZE222FXSQB" Android64="emulator-5562"/>
+	</ActiveMobileDevice>
+</BorlandProject>

@@ -1,0 +1,694 @@
+unit Unit1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs,shellapi, StrUtils, VclTee.TeeGDIPlus,
+  VCLTee.TeEngine, VCLTee.Series, Vcl.ExtCtrls, VCLTee.TeeProcs, VCLTee.Chart,
+  Vcl.StdCtrls,IOUtils, Vcl.ComCtrls;
+
+type
+  TForm1 = class(TForm)
+    Edit1: TEdit;
+    Button1: TButton;
+    Memo1: TMemo;
+    TrackBar1: TTrackBar;
+    CheckBox1: TCheckBox;
+    CheckBox2: TCheckBox;
+    TrackBar2: TTrackBar;
+    Button2: TButton;
+    Chart1: TChart;
+    TrackBar3: TTrackBar;
+    TrackBar4: TTrackBar;
+    Series2: TLineSeries;
+    Series3: TLineSeries;
+    Series4: TLineSeries;
+    Series5: TLineSeries;
+    Series6: TLineSeries;
+    Series7: TLineSeries;
+    Series8: TLineSeries;
+    Series9: TLineSeries;
+    Series10: TLineSeries;
+    Series11: TLineSeries;
+    Series12: TLineSeries;
+    Series13: TLineSeries;
+    Series14: TLineSeries;
+    Series15: TLineSeries;
+    Series16: TLineSeries;
+    Series17: TLineSeries;
+    Series18: TLineSeries;
+    Series19: TLineSeries;
+    Series20: TLineSeries;
+    Series21: TLineSeries;
+    Series22: TLineSeries;
+    Series23: TLineSeries;
+    Series24: TLineSeries;
+    Series25: TLineSeries;
+    Series26: TLineSeries;
+    Series27: TLineSeries;
+    Series28: TLineSeries;
+    Series29: TLineSeries;
+    Series30: TLineSeries;
+    Series31: TLineSeries;
+    Series32: TLineSeries;
+    Series33: TLineSeries;
+    Series34: TLineSeries;
+    Series35: TLineSeries;
+    Series36: TLineSeries;
+    Series37: TLineSeries;
+    Series38: TLineSeries;
+    Series39: TLineSeries;
+    Series40: TLineSeries;
+    Series41: TLineSeries;
+    Series42: TLineSeries;
+    Series43: TLineSeries;
+    Series44: TLineSeries;
+    Series45: TLineSeries;
+    Series46: TLineSeries;
+    Series47: TLineSeries;
+    Series48: TLineSeries;
+    Series49: TLineSeries;
+    Series50: TLineSeries;
+    Series1: TLineSeries;
+    CheckBox3: TCheckBox;
+    procedure FormCreate(Sender: TObject);
+    procedure TrackBar1Change(Sender: TObject);
+    procedure CheckBox1Click(Sender: TObject);
+    procedure TrackBar2Change(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure TrackBar3Change(Sender: TObject);
+    procedure TrackBar4Change(Sender: TObject);
+    procedure CheckBox3Click(Sender: TObject);
+
+  private
+    { Private declarations }
+  public
+     procedure AcceptFiles( var msg : TMessage );
+      message WM_DROPFILES;
+  end;
+
+var
+  Form1: TForm1;
+  ImportNummer:integer;
+implementation
+
+{$R *.dfm}
+
+
+
+//procedure countdates();
+//var
+//i:integer;
+//regel,datum:string;
+//begin
+//form1.Memo2.Clear;
+//form1.combobox1.clear;
+//form3.ComboBox1.Clear;
+//;
+//for I := 1 to form1.memo1.lines.count-1 do
+//  begin
+//
+//   regel := form1.memo1.lines[i];
+//   delete(regel,11,14);
+//
+//   if (Occurrences(regel,form1.Memo2.Text) = 0 )  then
+//   begin
+//      form1.memo2.lines.add(regel);
+//      form1.ComboBox1.Items.Add(regel);
+//
+//      form3.ComboBox1.Items.Add(regel);
+//   end;
+//
+//
+//  end;
+//
+//
+//form1.Label6.Caption := IntToStr(form1.memo2.lines.count);
+//end;
+
+
+procedure Split(Delimiter: Char; Str: string; ListOfStrings: TStrings) ;
+begin
+   ListOfStrings.Clear;
+   ListOfStrings.Delimiter       := Delimiter;
+   ListOfStrings.StrictDelimiter := True; // Requires D2006 or newer.
+   ListOfStrings.DelimitedText   := Str;
+end;
+
+
+function correctDateTime(DatumTijd:String):TDateTime;
+var
+correctedatum: TDateTime;
+
+OutputTijd:TStringList;
+Datum : TstringList;
+jaar,dag,maand,uur,minuut,seconde:TDateTime;
+begin
+ OutputTijd := TStringList.Create;
+ Datum      := TStringList.Create;
+ Split('-',DatumTijd,OutputTijd);
+ Split('/',OutputTijd[0],Datum);
+
+ correctedatum:= StrToDateTime(datum[2]+'-'+datum[1]+'-'+datum[0]+' '+OutputTijd[1]);
+
+ result :=  correctedatum;
+
+ OutputTijd.Free;
+ Datum.Free;
+end;
+
+
+function writenewday(datefile,datetime,value:string):Boolean;
+begin
+  TFile.AppendAllText('splitdays/'+datefile+'_Q-Strip.txt', datetime+';'+value);
+
+end;
+
+
+
+
+
+//    form1.Chart1.AddSeries(TBarSeries.Create(nil));
+//    //Form1.Series1.Add(sweatrate,DateTimeToStr(correctedatum),clBlue );
+//
+//    for intCnt:= 0 to form1.Chart1.SeriesCount -1 do begin
+//      with  form1.Chart1 do begin
+//        //Series[intCnt].Clear;
+//        Series[intCnt].Title := datum[2]+'-'+datum[1]+'-'+datum[0];
+//        Series[intCnt].ParentChart := form1.Chart1;
+//        Series[intCnt].XLabelsSource := 'dept_name';
+//        Series[intCnt].Add(sweatrate,DateTimeToStr(correctedatum),clBlue);
+//        //Series[intCnt].YValues.ValueSource := strlstField[intCnt];
+//      end;
+//    end;
+//   // break;
+
+
+
+function loadCsv(bestandsnaam:string):boolean;
+var
+csvdata: TStringList;
+OutPutList: TstringList;
+i,j:integer;
+sweatrate: integer;
+tijdstip:string;
+newfile: TStringlist;
+correctedatum: TDateTime;
+OutputTijd: TStringList;
+Datum : TstringList;
+jaar,dag,maand,uur,minuut,seconde: TDateTime;
+DatumTijd,lastdate:String;
+intCnt:integer;
+series : TBarSeries;
+begin
+
+csvdata:= TStringList.Create;
+OutPutList := TStringList.Create;
+
+OutputTijd := TStringList.Create;
+Datum      := TStringList.Create;
+
+csvdata.Delimiter:=';';
+csvdata.LoadFromFile(bestandsnaam);
+
+for i := 1 to csvdata.Count-1 do
+  begin
+    Split(';', csvdata[i], OutPutList) ;
+
+
+    Split('-',csvdata[i],OutputTijd);
+    Split('/',OutputTijd[0],Datum);
+
+    correctedatum:= StrToDateTime(datum[2]+'-'+datum[1]+'-'+datum[0]+' '+OutputTijd[1]);   ///DD-MM-YYYY HH:MM:SS
+
+
+   if(datum[2] = lastdate) AND (form1.checkbox2.checked = true)then
+    begin
+       writenewday(datum[2]+'-'+datum[1]+'-'+datum[0],OutPutList[0],OutPutList[1]+Char(#13))
+    end;
+
+    lastdate := datum[2];
+
+    tijdstip := OutPutList[0];
+    sweatrate:= OutPutList[1].ToInteger();
+
+
+    if (importnummer = 1) then
+    begin
+     Form1.Series1.Title:= datum[2]+'-'+datum[1]+'-'+datum[0];
+     Form1.Series1.Active:= true;
+     Form1.Series1.Add(sweatrate,DateTimeToStr(correctedatum));
+    end;
+    if (importnummer = 2) then
+    begin
+     Form1.Series2.Title:= datum[2]+'-'+datum[1]+'-'+datum[0];
+     Form1.Series2.Active:= true;
+     Form1.Series2.Add(sweatrate,DateTimeToStr(correctedatum));
+    end;
+
+    if (importnummer = 3) then
+    begin
+     Form1.Series3.Title:= datum[2]+'-'+datum[1]+'-'+datum[0];
+     Form1.Series3.Active:= true;
+     Form1.Series3.Add(sweatrate,DateTimeToStr(correctedatum));
+    end;
+
+    if (importnummer = 4) then
+    begin
+     Form1.Series4.Title:= datum[2]+'-'+datum[1]+'-'+datum[0];
+     Form1.Series4.Active:= true;
+     Form1.Series4.Add(sweatrate,DateTimeToStr(correctedatum));
+    end;
+
+    if (importnummer = 5) then
+    begin
+     Form1.Series5.Title:= datum[2]+'-'+datum[1]+'-'+datum[0];
+     Form1.Series5.Active:= true;
+     Form1.Series5.Add(sweatrate,DateTimeToStr(correctedatum));
+    end;
+
+    if (importnummer = 6) then
+    begin
+     Form1.Series6.Title:= datum[2]+'-'+datum[1]+'-'+datum[0];
+     Form1.Series6.Active:= true;
+     Form1.Series6.Add(sweatrate,DateTimeToStr(correctedatum));
+    end;
+
+    if (importnummer = 7) then
+    begin
+     Form1.Series7.Title:= datum[2]+'-'+datum[1]+'-'+datum[0];
+     Form1.Series7.Active:= true;
+     Form1.Series7.Add(sweatrate,DateTimeToStr(correctedatum));
+    end;
+
+    if (importnummer = 8) then
+    begin
+     Form1.Series8.Title:= datum[2]+'-'+datum[1]+'-'+datum[0];
+     Form1.Series8.Active:= true;
+     Form1.Series8.Add(sweatrate,DateTimeToStr(correctedatum));
+    end;
+
+    if (importnummer = 9) then
+    begin
+     Form1.Series9.Title:= datum[2]+'-'+datum[1]+'-'+datum[0];
+     Form1.Series9.Active:= true;
+     Form1.Series9.Add(sweatrate,DateTimeToStr(correctedatum));
+    end;
+
+    if (importnummer = 10) then
+    begin
+     Form1.Series10.Title:= datum[2]+'-'+datum[1]+'-'+datum[0];
+     Form1.Series10.Active:= true;
+     Form1.Series10.Add(sweatrate,DateTimeToStr(correctedatum));
+    end;
+
+    if (importnummer = 11) then
+    begin
+     Form1.Series11.Title:= datum[2]+'-'+datum[1]+'-'+datum[0];
+     Form1.Series11.Active:= true;
+     Form1.Series11.Add(sweatrate,DateTimeToStr(correctedatum));
+    end;
+
+    if (importnummer = 12) then
+    begin
+     Form1.Series12.Title:= datum[2]+'-'+datum[1]+'-'+datum[0];
+     Form1.Series12.Active:= true;
+     Form1.Series12.Add(sweatrate,DateTimeToStr(correctedatum));
+    end;
+
+    if (importnummer = 13) then
+    begin
+     Form1.Series13.Title:= datum[2]+'-'+datum[1]+'-'+datum[0];
+     Form1.Series13.Active:= true;
+     Form1.Series13.Add(sweatrate,DateTimeToStr(correctedatum));
+    end;
+
+    if (importnummer = 14) then
+    begin
+     Form1.Series14.Title:= datum[2]+'-'+datum[1]+'-'+datum[0];
+     Form1.Series14.Active:= true;
+     Form1.Series14.Add(sweatrate,DateTimeToStr(correctedatum));
+    end;
+
+    if (importnummer = 15) then
+    begin
+     Form1.Series15.Title:= datum[2]+'-'+datum[1]+'-'+datum[0];
+     Form1.Series15.Active:= true;
+     Form1.Series15.Add(sweatrate,DateTimeToStr(correctedatum));
+    end;
+
+    if (importnummer = 16) then
+    begin
+     Form1.Series16.Title:= datum[2]+'-'+datum[1]+'-'+datum[0];
+     Form1.Series16.Active:= true;
+     Form1.Series16.Add(sweatrate,DateTimeToStr(correctedatum));
+    end;
+
+    if (importnummer = 17) then
+    begin
+     Form1.Series17.Title:= datum[2]+'-'+datum[1]+'-'+datum[0];
+     Form1.Series17.Active:= true;
+     Form1.Series17.Add(sweatrate,DateTimeToStr(correctedatum));
+    end;
+
+        if (importnummer = 18) then
+    begin
+     Form1.Series18.Title:= datum[2]+'-'+datum[1]+'-'+datum[0];
+     Form1.Series18.Active:= true;
+     Form1.Series18.Add(sweatrate,DateTimeToStr(correctedatum));
+    end;
+
+        if (importnummer = 19) then
+    begin
+     Form1.Series19.Title:= datum[2]+'-'+datum[1]+'-'+datum[0];
+     Form1.Series19.Active:= true;
+     Form1.Series19.Add(sweatrate,DateTimeToStr(correctedatum));
+    end;
+
+        if (importnummer = 20) then
+    begin
+     Form1.Series20.Title:= datum[2]+'-'+datum[1]+'-'+datum[0];
+     Form1.Series20.Active:= true;
+     Form1.Series20.Add(sweatrate,DateTimeToStr(correctedatum));
+    end;
+
+        if (importnummer = 21) then
+    begin
+     Form1.Series21.Title:= datum[2]+'-'+datum[1]+'-'+datum[0];
+     Form1.Series21.Active:= true;
+     Form1.Series21.Add(sweatrate,DateTimeToStr(correctedatum));
+    end;
+
+        if (importnummer = 22) then
+    begin
+     Form1.Series22.Title:= datum[2]+'-'+datum[1]+'-'+datum[0];
+     Form1.Series22.Active:= true;
+     Form1.Series22.Add(sweatrate,DateTimeToStr(correctedatum));
+    end;
+
+        if (importnummer = 23) then
+    begin
+     Form1.Series23.Title:= datum[2]+'-'+datum[1]+'-'+datum[0];
+     Form1.Series23.Active:= true;
+     Form1.Series23.Add(sweatrate,DateTimeToStr(correctedatum));
+    end;
+
+        if (importnummer = 24) then
+    begin
+     Form1.Series24.Title:= datum[2]+'-'+datum[1]+'-'+datum[0];
+     Form1.Series24.Active:= true;
+     Form1.Series24.Add(sweatrate,DateTimeToStr(correctedatum));
+    end;
+
+        if (importnummer = 25) then
+    begin
+     Form1.Series25.Title:= datum[2]+'-'+datum[1]+'-'+datum[0];
+     Form1.Series25.Active:= true;
+     Form1.Series25.Add(sweatrate,DateTimeToStr(correctedatum));
+    end;
+
+        if (importnummer = 26) then
+    begin
+     Form1.Series26.Title:= datum[2]+'-'+datum[1]+'-'+datum[0];
+     Form1.Series26.Active:= true;
+     Form1.Series26.Add(sweatrate,DateTimeToStr(correctedatum));
+    end;
+
+        if (importnummer = 27) then
+    begin
+     Form1.Series27.Title:= datum[2]+'-'+datum[1]+'-'+datum[0];
+     Form1.Series27.Active:= true;
+     Form1.Series27.Add(sweatrate,DateTimeToStr(correctedatum));
+    end;
+
+        if (importnummer = 28) then
+    begin
+     Form1.Series28.Title:= datum[2]+'-'+datum[1]+'-'+datum[0];
+     Form1.Series28.Active:= true;
+     Form1.Series28.Add(sweatrate,DateTimeToStr(correctedatum));
+    end;
+
+        if (importnummer = 29) then
+    begin
+     Form1.Series29.Title:= datum[2]+'-'+datum[1]+'-'+datum[0];
+     Form1.Series29.Active:= true;
+     Form1.Series29.Add(sweatrate,DateTimeToStr(correctedatum));
+    end;
+        if (importnummer = 30) then
+    begin
+     Form1.Series30.Title:= datum[2]+'-'+datum[1]+'-'+datum[0];
+     Form1.Series30.Active:= true;
+     Form1.Series30.Add(sweatrate,DateTimeToStr(correctedatum));
+    end;
+        if (importnummer = 31) then
+    begin
+     Form1.Series31.Title:= datum[2]+'-'+datum[1]+'-'+datum[0];
+     Form1.Series31.Active:= true;
+     Form1.Series31.Add(sweatrate,DateTimeToStr(correctedatum));
+    end;
+        if (importnummer = 32) then
+    begin
+     Form1.Series32.Title:= datum[2]+'-'+datum[1]+'-'+datum[0];
+     Form1.Series32.Active:= true;
+     Form1.Series32.Add(sweatrate,DateTimeToStr(correctedatum));
+    end;
+        if (importnummer = 33) then
+    begin
+     Form1.Series33.Title:= datum[2]+'-'+datum[1]+'-'+datum[0];
+     Form1.Series33.Active:= true;
+     Form1.Series33.Add(sweatrate,DateTimeToStr(correctedatum));
+    end;
+        if (importnummer = 34) then
+    begin
+     Form1.Series34.Title:= datum[2]+'-'+datum[1]+'-'+datum[0];
+     Form1.Series34.Active:= true;
+     Form1.Series34.Add(sweatrate,DateTimeToStr(correctedatum));
+    end;
+        if (importnummer = 35) then
+    begin
+     Form1.Series35.Title:= datum[2]+'-'+datum[1]+'-'+datum[0];
+     Form1.Series35.Active:= true;
+     Form1.Series35.Add(sweatrate,DateTimeToStr(correctedatum));
+    end;
+        if (importnummer = 36) then
+    begin
+     Form1.Series36.Title:= datum[2]+'-'+datum[1]+'-'+datum[0];
+     Form1.Series36.Active:= true;
+     Form1.Series36.Add(sweatrate,DateTimeToStr(correctedatum));
+    end;
+        if (importnummer = 37) then
+    begin
+     Form1.Series37.Title:= datum[2]+'-'+datum[1]+'-'+datum[0];
+     Form1.Series37.Active:= true;
+     Form1.Series37.Add(sweatrate,DateTimeToStr(correctedatum));
+    end;
+        if (importnummer = 38) then
+    begin
+     Form1.Series38.Title:= datum[2]+'-'+datum[1]+'-'+datum[0];
+     Form1.Series38.Active:= true;
+     Form1.Series38.Add(sweatrate,DateTimeToStr(correctedatum));
+    end;
+        if (importnummer = 39) then
+    begin
+     Form1.Series39.Title:= datum[2]+'-'+datum[1]+'-'+datum[0];
+     Form1.Series39.Active:= true;
+     Form1.Series39.Add(sweatrate,DateTimeToStr(correctedatum));
+    end;
+        if (importnummer = 40) then
+    begin
+     Form1.Series40.Title:= datum[2]+'-'+datum[1]+'-'+datum[0];
+     Form1.Series40.Active:= true;
+     Form1.Series40.Add(sweatrate,DateTimeToStr(correctedatum));
+    end;
+        if (importnummer = 41) then
+    begin
+     Form1.Series41.Title:= datum[2]+'-'+datum[1]+'-'+datum[0];
+     Form1.Series41.Active:= true;
+     Form1.Series41.Add(sweatrate,DateTimeToStr(correctedatum));
+    end;
+        if (importnummer = 42) then
+    begin
+     Form1.Series42.Title:= datum[2]+'-'+datum[1]+'-'+datum[0];
+     Form1.Series42.Active:= true;
+     Form1.Series42.Add(sweatrate,DateTimeToStr(correctedatum));
+    end;
+        if (importnummer = 43) then
+    begin
+     Form1.Series43.Title:= datum[2]+'-'+datum[1]+'-'+datum[0];
+     Form1.Series43.Active:= true;
+     Form1.Series43.Add(sweatrate,DateTimeToStr(correctedatum));
+    end;
+        if (importnummer = 44) then
+    begin
+     Form1.Series44.Title:= datum[2]+'-'+datum[1]+'-'+datum[0];
+     Form1.Series44.Active:= true;
+     Form1.Series44.Add(sweatrate,DateTimeToStr(correctedatum));
+    end;
+        if (importnummer = 45) then
+    begin
+     Form1.Series45.Title:= datum[2]+'-'+datum[1]+'-'+datum[0];
+     Form1.Series45.Active:= true;
+     Form1.Series45.Add(sweatrate,DateTimeToStr(correctedatum));
+    end;
+        if (importnummer = 46) then
+    begin
+     Form1.Series46.Title:= datum[2]+'-'+datum[1]+'-'+datum[0];
+     Form1.Series46.Active:= true;
+     Form1.Series46.Add(sweatrate,DateTimeToStr(correctedatum));
+    end;
+        if (importnummer = 47) then
+    begin
+     Form1.Series47.Title:= datum[2]+'-'+datum[1]+'-'+datum[0];
+     Form1.Series47.Active:= true;
+     Form1.Series47.Add(sweatrate,DateTimeToStr(correctedatum));
+    end;
+        if (importnummer = 48) then
+    begin
+     Form1.Series48.Title:= datum[2]+'-'+datum[1]+'-'+datum[0];
+     Form1.Series48.Active:= true;
+     Form1.Series48.Add(sweatrate,DateTimeToStr(correctedatum));
+    end;
+        if (importnummer = 49) then
+    begin
+     Form1.Series49.Title:= datum[2]+'-'+datum[1]+'-'+datum[0];
+     Form1.Series49.Active:= true;
+     Form1.Series49.Add(sweatrate,DateTimeToStr(correctedatum));
+    end;
+        if (importnummer = 50) then
+    begin
+     Form1.Series50.Title:= datum[2]+'-'+datum[1]+'-'+datum[0];
+     Form1.Series50.Active:= true;
+     Form1.Series50.Add(sweatrate,DateTimeToStr(correctedatum));
+    end;
+    //Form1.Series2.Add(sweatrate,tijdstip,clRed);
+   // Form1.memo1.lines.add(DateTimeToStr(correctDateTime(OutPutList[0])));
+  end;
+
+  csvdata.Free;
+  Outputlist.Free;
+  OutputTijd.Free;
+  Datum.free;
+end;
+
+
+
+procedure TForm1.AcceptFiles( var msg : TMessage );
+const
+  cnMaxFileNameLen = 255;
+var
+  i,
+  nCount     : integer;
+  acFileName : array [0..cnMaxFileNameLen] of char;
+begin
+  nCount := DragQueryFile( msg.WParam,
+                           $FFFFFFFF,
+                           acFileName,
+                           cnMaxFileNameLen );
+  for i := 0 to nCount-1 do
+  begin
+    DragQueryFile( msg.WParam, i,
+                   acFileName, cnMaxFileNameLen );
+
+    //MessageBox( Handle, acFileName, '', MB_OK );
+    //memo1.Lines.LoadFromFile(acFileName);
+    importnummer := importnummer+1;
+    loadCsv(acFileName);
+  end;
+  DragFinish( msg.WParam );
+ //insert file  into db
+ form1.Caption:= 'Files Loaded '+ IntToStr(ImportNummer);
+
+end;
+
+
+
+
+function Occurrences(const Substring, Text: string): integer;
+var
+  offset: integer;
+begin
+  result := 0;
+  offset := PosEx(Substring, Text, 1);
+  while offset <> 0 do
+  begin
+    inc(result);
+    offset := PosEx(Substring, Text, offset + length(Substring));
+  end;
+end;
+
+
+
+
+procedure TForm1.Button2Click(Sender: TObject);
+var
+i:integer;
+begin
+
+ for I := 0 to chart1.SeriesCount-1 do
+  begin
+
+  chart1.series[i].clear;
+  Chart1.series[i].Visible:= false;
+  chart1.series[i].Title:= ' ';
+
+  end;
+
+
+ importnummer:= 0;
+end;
+
+procedure TForm1.CheckBox1Click(Sender: TObject);
+begin
+if (checkbox1.checked) then
+    begin
+      chart1.View3D:= true;
+    end else
+    begin
+      chart1.View3D:= false;
+    end;
+end;
+
+procedure TForm1.CheckBox3Click(Sender: TObject);
+begin
+ if (checkbox3.Checked) then
+ begin
+   chart1.Legend.Visible:= false;
+ end else
+     begin
+       chart1.Legend.Visible:= true;
+     end;
+end;
+
+procedure TForm1.FormCreate(Sender: TObject);
+var
+i: integer;
+begin
+ importnummer:= 0;
+ DragAcceptFiles(Self.Handle, True);
+
+
+
+end;
+
+procedure TForm1.TrackBar1Change(Sender: TObject);
+begin
+chart1.View3DOptions.Rotation := trackbar1.Position;
+end;
+
+procedure TForm1.TrackBar2Change(Sender: TObject);
+begin
+ chart1.View3DOptions.Perspective := trackbar2.Position;
+end;
+
+procedure TForm1.TrackBar3Change(Sender: TObject);
+begin
+  chart1.View3DOptions.Elevation := trackbar3.Position;
+end;
+
+procedure TForm1.TrackBar4Change(Sender: TObject);
+begin
+    chart1.View3DOptions.Zoom := trackbar4.Position;
+end;
+
+end.
