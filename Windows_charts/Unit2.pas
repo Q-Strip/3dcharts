@@ -95,6 +95,8 @@ type
     Label87: TLabel;
     GroupBox2: TGroupBox;
     Label66: TLabel;
+    Label67: TLabel;
+    Label68: TLabel;
     procedure Label65Click(Sender: TObject);
     procedure Label66Click(Sender: TObject);
     procedure Label68Click(Sender: TObject);

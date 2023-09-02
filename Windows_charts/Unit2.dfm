@@ -5,8 +5,8 @@ object Form2: TForm2
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'The  Biggest Kudos box in the world! '
-  ClientHeight = 462
-  ClientWidth = 645
+  ClientHeight = 502
+  ClientWidth = 655
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,8 +15,8 @@ object Form2: TForm2
   Font.Style = []
   OldCreateOrder = False
   DesignSize = (
-    645
-    462)
+    655
+    502)
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
@@ -155,8 +155,8 @@ object Form2: TForm2
     Caption = 'Prakash Ekambaranellore'
   end
   object Label19: TLabel
-    Left = 149
-    Top = 414
+    Left = 144
+    Top = 442
     Width = 345
     Height = 16
     Caption = 'And all People who contributed from the Clubhouse groups :'
@@ -287,8 +287,8 @@ object Form2: TForm2
     Caption = 'Mitch De Leon'
   end
   object Label35: TLabel
-    Left = 166
-    Top = 436
+    Left = 161
+    Top = 464
     Width = 309
     Height = 18
     Caption = 'Medtech 24/7 Lobby && Mending Medicine'
@@ -676,11 +676,25 @@ object Form2: TForm2
     Font.Style = []
     ParentFont = False
   end
+  object Label67: TLabel
+    Left = 181
+    Top = 410
+    Width = 56
+    Height = 13
+    Caption = 'Karin Koens'
+  end
+  object Label68: TLabel
+    Left = 24
+    Top = 410
+    Width = 72
+    Height = 13
+    Caption = 'Loes Cassteele'
+  end
   object RadioGroup1: TRadioGroup
-    Left = 8
+    Left = 13
     Top = 95
     Width = 621
-    Height = 318
+    Height = 341
     Anchors = [akTop]
     TabOrder = 0
   end
