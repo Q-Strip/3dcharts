@@ -1,6 +1,6 @@
-//  created   April 2021
+//  created   April 2023
 //  by Daan van der Werf - Q-Strip
-//  modified jan - 2022 
+//  modified jan - 2023 
 //  This example code is in the public domain.
 
 // Date and time functions using a PCF8523 RTC connected via I2C and Wire lib
@@ -8,19 +8,14 @@
 #include <SD.h>
 #include <SPI.h>
 RTC_PCF8523 rtc;
-
-
 File myFile;
 int pinCS = 10; // Pin 10 on Arduino Uno
-
 int sensorPin   = A0;
 int sensorValue = 0;
 
-
 void setup () {
   Serial.begin(57600);
-
-   pinMode(pinCS, OUTPUT);
+  pinMode(pinCS, OUTPUT);
    
 #ifndef ESP8266
   while (!Serial); // wait for serial port to connect. Needed for native USB
@@ -34,18 +29,12 @@ void setup () {
 
   if (! rtc.initialized() || rtc.lostPower()) {
   //  Serial.println("RTC is NOT initialized, let's set the time!");
-
     rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
-
   }
 
- //rtc.adjust(DateTime(2023, 1, 13, 14, 5, 0)); //Program Your current time here to synchronise RTC
-
-  rtc.start();
-  
-
-
-
+ //rtc.adjust(DateTime(2023, 6, 10, 2, 41, 0)); //Program Your current time here to synchronise RTC
+ rtc.start();
+ 
  if (SD.begin())
   {
    // Serial.println("SD card is ready to use.");
@@ -66,7 +55,7 @@ void setup () {
 
 void loop () {
     DateTime now = rtc.now();
-    
+//    To reserve space You could monitor the times between 21:00 and 9:00 o'clock, (to make 12 hour blocks)    
 //=>  if  ((now.hour() == int(21)) || (now.hour() == int(22)) || (now.hour() == int(23)) || (now.hour() == int(00)) || 
 //    (now.hour() == int(1)) || (now.hour() == int(2)) || (now.hour() == int(3)) || (now.hour() == int(4)) || 
 //    (now.hour() == int(5)) || (now.hour() == int(6)) || (now.hour() == int(7)) || (now.hour() == int(8))  )
@@ -78,12 +67,11 @@ void loop () {
         Datum =now.toString(buf2);
         sensorValue = analogRead(sensorPin); 
         myFile.println(Datum+";"+sensorValue+";");
-        myFile.close();
-        
-    //    Serial.println(Datum+";"+sensorValue+";");
+        myFile.close();        
+//      Serial.println(Datum+";"+sensorValue+";");
         }
     delay(60000);
-   // delay(10000);///development
+//  delay(10000);///development
     
 //=>    }
     
@@ -91,6 +79,6 @@ void loop () {
 //    {
       //Serial.println("No job to run in this timeframe.. ");
 //      delay(60000);
-//      }
+//     }
     
 }

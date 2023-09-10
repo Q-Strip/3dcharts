@@ -5,8 +5,8 @@ object Form2: TForm2
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'The  Biggest Kudos box in the world! '
-  ClientHeight = 502
-  ClientWidth = 655
+  ClientHeight = 575
+  ClientWidth = 653
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,8 +15,8 @@ object Form2: TForm2
   Font.Style = []
   OldCreateOrder = False
   DesignSize = (
-    655
-    502)
+    653
+    575)
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
@@ -155,8 +155,8 @@ object Form2: TForm2
     Caption = 'Prakash Ekambaranellore'
   end
   object Label19: TLabel
-    Left = 144
-    Top = 442
+    Left = 138
+    Top = 514
     Width = 345
     Height = 16
     Caption = 'And all People who contributed from the Clubhouse groups :'
@@ -287,8 +287,8 @@ object Form2: TForm2
     Caption = 'Mitch De Leon'
   end
   object Label35: TLabel
-    Left = 161
-    Top = 464
+    Left = 155
+    Top = 536
     Width = 309
     Height = 18
     Caption = 'Medtech 24/7 Lobby && Mending Medicine'
@@ -582,7 +582,7 @@ object Form2: TForm2
   end
   object Label78: TLabel
     Left = 24
-    Top = 392
+    Top = 391
     Width = 76
     Height = 13
     Caption = 'Sandra Spencer'
@@ -617,21 +617,21 @@ object Form2: TForm2
   end
   object Label83: TLabel
     Left = 180
-    Top = 392
+    Top = 391
     Width = 64
     Height = 13
     Caption = 'Tom Donnelly'
   end
   object Label84: TLabel
     Left = 327
-    Top = 392
+    Top = 391
     Width = 71
     Height = 13
     Caption = 'Annette Usken'
   end
   object Label85: TLabel
     Left = 502
-    Top = 392
+    Top = 391
     Width = 54
     Height = 13
     Caption = 'Linda Kemp'
@@ -678,30 +678,142 @@ object Form2: TForm2
   end
   object Label67: TLabel
     Left = 181
-    Top = 410
+    Top = 409
     Width = 56
     Height = 13
     Caption = 'Karin Koens'
   end
   object Label68: TLabel
     Left = 24
-    Top = 410
+    Top = 409
     Width = 72
     Height = 13
     Caption = 'Loes Cassteele'
   end
+  object Label92: TLabel
+    Left = 328
+    Top = 409
+    Width = 92
+    Height = 13
+    Caption = 'Jan Willem Kolkman'
+  end
+  object Label93: TLabel
+    Left = 504
+    Top = 409
+    Width = 60
+    Height = 13
+    Caption = 'David Sieger'
+  end
+  object Label106: TLabel
+    Left = 25
+    Top = 471
+    Width = 78
+    Height = 13
+    Caption = 'Erwin Van Ginkel'
+  end
+  object Label102: TLabel
+    Left = 24
+    Top = 455
+    Width = 123
+    Height = 13
+    Caption = 'Camilo Caquimbo Tabares'
+  end
+  object Label98: TLabel
+    Left = 24
+    Top = 440
+    Width = 76
+    Height = 13
+    Caption = 'Jan van Loenen'
+  end
+  object Label94: TLabel
+    Left = 25
+    Top = 425
+    Width = 51
+    Height = 13
+    Caption = 'Ersan Balci'
+  end
+  object Label95: TLabel
+    Left = 181
+    Top = 425
+    Width = 67
+    Height = 13
+    Caption = 'Perry Verhoef'
+  end
+  object Label99: TLabel
+    Left = 181
+    Top = 440
+    Width = 101
+    Height = 13
+    Caption = 'Raghavendran Gopal'
+  end
+  object Label103: TLabel
+    Left = 181
+    Top = 455
+    Width = 74
+    Height = 13
+    Caption = 'Marloes Jansen'
+  end
+  object Label104: TLabel
+    Left = 328
+    Top = 455
+    Width = 39
+    Height = 13
+    Caption = 'Sanne B'
+  end
+  object Label100: TLabel
+    Left = 329
+    Top = 440
+    Width = 21
+    Height = 13
+    Caption = 'Alan'
+  end
+  object Label96: TLabel
+    Left = 328
+    Top = 425
+    Width = 105
+    Height = 13
+    Caption = 'Anne-Mie Vanderhelst'
+  end
+  object Label105: TLabel
+    Left = 504
+    Top = 455
+    Width = 94
+    Height = 13
+    Caption = 'Anniek van der Wilk'
+  end
+  object Label101: TLabel
+    Left = 504
+    Top = 440
+    Width = 41
+    Height = 13
+    Caption = 'Himenita'
+  end
+  object Label97: TLabel
+    Left = 504
+    Top = 425
+    Width = 90
+    Height = 13
+    Caption = 'Muhammad Waqas'
+  end
+  object Label88: TLabel
+    Left = 182
+    Top = 471
+    Width = 85
+    Height = 13
+    Caption = 'Marvin Duivestein'
+  end
   object RadioGroup1: TRadioGroup
-    Left = 13
+    Left = 12
     Top = 95
     Width = 621
-    Height = 341
+    Height = 413
     Anchors = [akTop]
     TabOrder = 0
   end
   object GroupBox2: TGroupBox
     Left = 139
     Top = 10
-    Width = 490
+    Width = 495
     Height = 81
     TabOrder = 1
   end
