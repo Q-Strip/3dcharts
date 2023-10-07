@@ -823,6 +823,13 @@ object Form2: TForm2
     Height = 13
     Caption = 'Melissa Aars'#233'e'
   end
+  object Label107: TLabel
+    Left = 180
+    Top = 488
+    Width = 75
+    Height = 13
+    Caption = 'Jonas Heymans'
+  end
   object RadioGroup1: TRadioGroup
     Left = 8
     Top = 95
