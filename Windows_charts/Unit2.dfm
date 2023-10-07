@@ -824,7 +824,7 @@ object Form2: TForm2
     Caption = 'Melissa Aars'#233'e'
   end
   object RadioGroup1: TRadioGroup
-    Left = 12
+    Left = 8
     Top = 95
     Width = 621
     Height = 413
